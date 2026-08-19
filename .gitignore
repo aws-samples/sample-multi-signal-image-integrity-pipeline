@@ -1,0 +1,43 @@
+# Dependencies and build output
+node_modules/
+dist/
+cdk.out/
+*.js
+*.d.ts
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Agent/tooling artifacts
+.claude/
+.quickwork/
+
+# Internal-only working notes and scan-tool state (never published)
+docs/internal/
+.holmes/
+# Kept on disk so local Holmes scans still exclude docs/internal/, but not shipped:
+# it is internal tool config with no meaning to a reader of the published sample.
+.holmesignore
+
+# Environment and secrets
+.env
+.env.*
+*.pem
+*.key
+
+# OS
+.DS_Store
+
+# Build artifacts (rebuilt by scripts)
+.venv-test/
+scripts/.seed-tmp/
+scripts/gallery/
+infra/layers/
+frontend/tsconfig.tsbuildinfo
+
+# Security review evidence (generated locally, attached to the review ticket)
+repolinter-report.md
